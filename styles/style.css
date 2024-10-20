@@ -1,1 +1,153 @@
 /* место для вашего кода */
+.header {
+    margin: 92px 25px;
+    font-family: Raleway;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+
+    width: 1052px;
+    display: grid;
+    grid-template-columns: 20fr 17fr 10fr;
+    grid-template-areas: 
+    "menu logo contacts";
+    
+    
+   
+
+}
+.header__menu {
+    display: flex;
+}
+.header__links-list {
+    line-height: 21.13px;
+    display: flex; /* этот флекс только для того, чтобы список вытянулся */
+    align-self: center;
+    grid-area: menu;
+    gap: 0px 32px;
+    list-style: circle;
+    
+}
+.header__links-list-item_no-bullit {
+    list-style-type: none;
+}
+
+.header__logo {
+    display: block;
+    width: 130px;
+    height: 105px;
+    grid-area: logo;
+    
+}
+
+.contacts {
+    text-align: left;
+    line-height: 24.3px;
+    list-style: none;
+    grid-area: contacts;
+}
+
+.cover {
+    
+    background: url(/images/cover.jpg) no-repeat center center;
+    background-size: cover;
+    width: 1100px;
+    height: 757px;
+    
+}
+.overlay {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(0 0 0 / 0.6);
+    z-index: 1;
+    
+}
+h1 {
+    text-transform: uppercase;
+    font-family: Raleway;
+    font-size: 100px;
+    font-weight: 700;
+    line-height: 100px;
+    letter-spacing: 0.3em;
+    color: white;
+
+}
+
+.aligned-text {
+    text-align: left;
+    padding: 170px 734px 0px 50px;
+}
+
+.aligned-text_center {
+    padding: 30px 65px 0px 10px;
+    text-align: center;
+}
+
+.aligned-text_right {
+    padding: 17px 395px 0px 633px;
+    text-align: right;
+    
+}
+
+.no-letter-spacing {
+     letter-spacing: 0; /* обнуление расстояния у последней буквы*/
+}
+
+.letter-spacing-extended {
+    letter-spacing: 60px;
+}
+.cover__description {
+    display: flex;
+    padding: 135px 50px 0px 78px;
+    
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.cover__description-text {
+    
+    text-transform: uppercase;
+    font-family: Raleway;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 28px;
+    text-align: left;
+    color: white;
+    
+    
+}
+.bet-button {
+    width: 256px;
+    height: 51px;
+    background-color: transparent;
+    border: 1px solid white;
+} 
+.button-text {        /* не уверен что надо отделять текст от кнопки, но наверное так лучше */
+    color: white;
+    text-transform: uppercase;
+    font-family: Raleway;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 25.83px;
+    text-align: center;
+}
+    
+.description-letter-spacing-extended { /* спан для больших пробелов между словами */
+    font-family: Raleway;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0.8em;
+    text-align: left;
+
+}
+.description-letter-spacing-extended-between {  /* одиночная В стоит между двумя словами, поэтому отступ больше */
+    font-family: Raleway;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 1.1em;
+    text-align: left;
+}
