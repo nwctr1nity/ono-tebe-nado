@@ -1,24 +1,31 @@
-/* место для вашего кода */
+/* мне категорически не нравится что в рекомендуемых инструкцией тэгах вместо
+пробела ставится то нижнее подчеркивание, то дефис, но делал по инструкции и менять лень */
+h3 {
+    text-transform: uppercase;
+    font-family: Raleway;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 46.96px;
+}
+
 .header {
     margin: 92px 25px;
     font-family: Raleway;
     font-size: 18px;
     font-weight: 400;
     letter-spacing: 0.01em;
-
     width: 1052px;
     display: grid;
-    grid-template-columns: 20fr 17fr 10fr;
+    grid-template-columns: 454px 322px 266px;
     grid-template-areas: 
     "menu logo contacts";
-    
-    
-   
-
 }
+
 .header__menu {
     display: flex;
+    padding-left: 26.52px;
 }
+
 .header__links-list {
     line-height: 21.13px;
     display: flex; /* этот флекс только для того, чтобы список вытянулся */
@@ -28,19 +35,41 @@
     list-style: circle;
     
 }
+
+/* сделал подчеркивание через границы, т.к. на макете линия не режется символами */
+.header__link {
+    border-bottom: 1px solid black;
+    text-decoration: none;
+}
+
+.header__link_active {
+    text-decoration: none;
+}
+
 .header__links-list-item_no-bullit {
     list-style-type: none;
 }
 
 .header__logo {
     display: block;
-    width: 130px;
-    height: 105px;
+    width: 129.11px;
+    height: 104.65px;
     grid-area: logo;
     
 }
 
+.email {
+    text-decoration: none;
+    border-bottom: 1px solid black;
+}
+
+.telephone {
+    text-decoration: none;
+    border-bottom: 1px solid black;
+}
+
 .contacts {
+    align-self: center;
     text-align: left;
     line-height: 24.3px;
     list-style: none;
@@ -48,20 +77,25 @@
 }
 
 .cover {
-    
+    position: relative;
     background: url(/images/cover.jpg) no-repeat center center;
     background-size: cover;
     width: 1100px;
     height: 757px;
+    margin-bottom: 179px;
+    inset: 0;
     
 }
-.overlay {
+
+.overlay { 
+    position: absolute;
     height: 100%;
     width: 100%;
-    background-color: rgb(0 0 0 / 0.6);
-    z-index: 1;
-    
+    background-color: rgb(0 0 0 / 0.6); 
+    z-index: 0;
+
 }
+
 h1 {
     text-transform: uppercase;
     font-family: Raleway;
@@ -70,21 +104,25 @@ h1 {
     line-height: 100px;
     letter-spacing: 0.3em;
     color: white;
+}
 
+.cover__title {
+    position: relative;
+    z-index: 1;
 }
 
 .aligned-text {
     text-align: left;
-    padding: 170px 734px 0px 50px;
+    padding: 170px 734px 0 50px;
 }
 
 .aligned-text_center {
-    padding: 30px 65px 0px 10px;
+    padding: 30px 65px 0 10px;
     text-align: center;
 }
 
 .aligned-text_right {
-    padding: 17px 395px 0px 633px;
+    padding: 17px 395px 0 633px;
     text-align: right;
     
 }
@@ -96,18 +134,18 @@ h1 {
 .letter-spacing-extended {
     letter-spacing: 60px;
 }
+
 .cover__description {
     display: flex;
     padding: 135px 50px 0px 78px;
-    
+    position: relative;
+    z-index: 1;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
 }
 
-
 .cover__description-text {
-    
     text-transform: uppercase;
     font-family: Raleway;
     font-size: 22px;
@@ -115,15 +153,15 @@ h1 {
     line-height: 28px;
     text-align: left;
     color: white;
-    
-    
 }
+
 .bet-button {
     width: 256px;
     height: 51px;
     background-color: transparent;
     border: 1px solid white;
 } 
+
 .button-text {        /* не уверен что надо отделять текст от кнопки, но наверное так лучше */
     color: white;
     text-transform: uppercase;
@@ -143,6 +181,7 @@ h1 {
     text-align: left;
 
 }
+
 .description-letter-spacing-extended-between {  /* одиночная В стоит между двумя словами, поэтому отступ больше */
     font-family: Raleway;
     font-size: 22px;
@@ -150,4 +189,233 @@ h1 {
     line-height: 28px;
     letter-spacing: 1.1em;
     text-align: left;
+}
+
+.lots {
+    text-decoration: none;
+    margin: 0 24px;
+    width: 1052px;
+    height: 692px;
+}
+
+.lots__heading {
+    text-align: left;
+    padding: 0 891px 27px 40px;
+}
+
+
+.lots__card-list {
+    display: flex;
+    gap: 25px;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 334px;
+    height: 563px;
+    margin-bottom: 30px;
+}
+
+.card_type_film {
+    background-image: url(/images/card-lot-01.jpg);
+    background-size:cover;
+    background-position: center;
+    row-gap: 238px;
+}
+
+.card_type_book {
+    background-image: url(/images/card-lot-02.jpg);
+    background-size:cover;
+    background-position: center;
+}
+
+.card_type_picture {
+    background-image: url(/images/card-lot-03.jpg);
+    background-size:cover;
+    background-position: center;
+    row-gap: 90px;
+}
+ 
+.card__text {
+    position: relative;
+    z-index: 1;
+    font-family: Raleway;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    color: white;
+    text-decoration: none;
+    padding: 0 40px 48px;
+}
+
+.span-13space-lots-text {
+    letter-spacing: 0.13em;
+}
+
+.card__title {
+    position: relative;
+    z-index: 1;
+    text-transform: uppercase;
+    width: 254px;
+    text-decoration: none;
+    font-family: Raleway;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 26.4px;
+    text-align: left;
+    color: white;
+    margin: 51px 40px 0px;
+}
+
+/* опять таки в макете андерлайн не рвется символами, поэтому так */
+.anchor-underline {
+    border-bottom: 1px solid white;
+
+}
+.lots__look-more-link {
+    text-transform: lowercase;
+    font-family: Raleway;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 23.48px;
+    text-align: left;
+    padding: 0 820px 2px 40px;
+}
+
+.lots__look-more-link-underline {
+    border-bottom: 1px solid black;
+}
+
+.about {
+    margin: 146px 25px 0;
+    display: grid;
+    grid-template-columns: 334px 693px;
+    grid-template-areas: "column-left column-right";
+    gap: 25px;
+}
+
+.about__logo-background {
+    margin: 0 auto;
+    border-radius: 50%;
+    background-color: black;
+    width: 240px;
+    height: 240px;
+    display: flex;  /* чтоб маржын ауто работал у лого ну вы поняли да */
+    margin: 35px auto 320px;
+}
+
+.about__logo {
+    margin: auto;
+    width: 141.54px;
+    height: 112.55px;
+}
+
+.about__column-left {
+    grid-area: "column-left";
+}
+
+.about__column-right {
+    grid-area: "column-right";
+}
+
+.about__text {
+    font-family: Raleway;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.01em;
+    text-align: left;
+    color: black;   
+    margin-bottom: 1em;
+}
+
+.paragraph-0space {
+    letter-spacing: 0.00em;
+}
+
+.about__title {
+    width: 291;
+    padding: 136px 402px 100px 0;
+
+}
+
+/* то что будет снизу - это то, как представлено в макете. 
+Но на глаз 0 разницы как будто бы */
+
+.span-0space-about-text {
+    letter-spacing: 0;
+}
+
+.span-2space-about-text {
+    letter-spacing: 0.02em;
+}
+
+.span-minus-1space-about-text {
+    letter-spacing: -0.01em;
+}
+
+.span-3space-about-text {
+    letter-spacing: 0.03em;
+}
+
+.span-4space-about-text {
+    letter-spacing: 0.04em;
+}
+
+.span-1space-about-text {  
+    letter-spacing: 0.01em; /* а это вообще крайне странное правило, т.к. в родительском тэгелеттерспейсинг ровно такой же */
+}
+
+.footer {
+    margin: 180px 50px 88px;
+    font-family: Raleway;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    width: 1000px;
+    height: 98px;
+    display: grid;
+    grid-template-columns: 240.52px 519.48px 240px;
+    grid-template-areas: 
+    "contacts menu social-list";
+}
+
+.footer__menu {
+    display: flex;
+}
+
+.footer__links-list {
+    line-height: 21.13px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 185.48px;
+    align-self: flex-start;
+    grid-area: menu;
+    gap: 0px 32px;
+    list-style: none;
+    text-align: center;
+}
+
+.footer__link {
+    border-bottom: 1px solid black;
+    text-decoration: none;
+}
+
+.footer__link_active {
+    text-decoration: none;
+}
+
+.social-icon {
+    width: 48px;
+}
+
+.footer__social-list {
+    grid-area: social-list;
+    display: flex;
+    align-self: flex-start;
+    flex-direction: row;
+    gap: 0 48px;
 }
