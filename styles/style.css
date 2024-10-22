@@ -31,7 +31,7 @@ h3 {
     display: flex; /* этот флекс только для того, чтобы список вытянулся */
     align-self: center;
     grid-area: menu;
-    gap: 0px 32px;
+    gap: 0 32px;
     list-style: circle;
     
 }
@@ -275,6 +275,7 @@ h1 {
     border-bottom: 1px solid white;
 
 }
+
 .lots__look-more-link {
     text-transform: lowercase;
     font-family: Raleway;
@@ -307,6 +308,11 @@ h1 {
     margin: 35px auto 320px;
 }
 
+.about__title {
+    width: 693px;
+    padding: 136px 402px 100px 0;
+}
+
 .about__logo {
     margin: auto;
     width: 141.54px;
@@ -333,14 +339,11 @@ h1 {
 }
 
 .paragraph-0space {
-    letter-spacing: 0.00em;
+    letter-spacing: 0;
+    margin-bottom: 0;
 }
 
-.about__title {
-    width: 291;
-    padding: 136px 402px 100px 0;
 
-}
 
 /* то что будет снизу - это то, как представлено в макете. 
 Но на глаз 0 разницы как будто бы */
