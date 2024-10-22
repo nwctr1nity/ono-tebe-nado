@@ -139,7 +139,7 @@ h1 {
 
 .cover__description {
     display: flex;
-    padding: 134px 50px 0px 78px;
+    padding: 136px 50px 0px 78px;
     position: relative;
     z-index: 1;
     flex-direction: row;
@@ -207,7 +207,7 @@ h1 {
 
 .lots__heading {
     text-align: left;
-    padding: 0 891px 27px 40px;
+    padding: 2px 891px 27px 40px;
 }
 
 
@@ -328,7 +328,7 @@ h1 {
 .about__title {
     white-space: nowrap;
     width: 100%;
-    padding: 136px 402px 100px 0;
+    padding: 138px 402px 100px 0;
 }
 
 .about__logo {
@@ -352,7 +352,7 @@ h1 {
     letter-spacing: 0.05px;
     text-align: left;
     color: black;
-    margin-bottom: 24px;
+    margin-bottom: 23px;
 }
 
 .paragraph-0space {
