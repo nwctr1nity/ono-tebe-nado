@@ -84,16 +84,14 @@ h3 {
     height: 757px;
     margin-bottom: 179px;
     inset: 0;
-    
 }
 
-.overlay { 
+.overlay {
     position: absolute;
     height: 100%;
     width: 100%;
-    background-color: rgb(0 0 0 / 0.6); 
+    background-color: rgb(0 0 0 / 0.6);
     z-index: 0;
-
 }
 
 h1 {
@@ -160,9 +158,6 @@ h1 {
     height: 51px;
     background-color: transparent;
     border: 1px solid white;
-} 
-
-.button-text {        /* не уверен что надо отделять текст от кнопки, но наверное так лучше */
     color: white;
     text-transform: uppercase;
     font-family: Raleway;
@@ -170,7 +165,7 @@ h1 {
     font-weight: 500;
     line-height: 25.83px;
     text-align: center;
-}
+} 
     
 .description-letter-spacing-extended { /* спан для больших пробелов между словами */
     font-family: Raleway;
@@ -179,7 +174,6 @@ h1 {
     line-height: 28px;
     letter-spacing: 0.8em;
     text-align: left;
-
 }
 
 .description-letter-spacing-extended-between {  /* одиночная В стоит между двумя словами, поэтому отступ больше */
@@ -299,7 +293,6 @@ h1 {
 }
 
 .about__logo-background {
-    margin: 0 auto;
     border-radius: 50%;
     background-color: black;
     width: 240px;
@@ -334,7 +327,7 @@ h1 {
     line-height: 24px;
     letter-spacing: 0.01em;
     text-align: left;
-    color: black;   
+    color: black;
     margin-bottom: 1em;
 }
 
@@ -368,7 +361,7 @@ h1 {
     letter-spacing: 0.04em;
 }
 
-.span-1space-about-text {  
+.span-1space-about-text {
     letter-spacing: 0.01em; /* а это вообще крайне странное правило, т.к. в родительском тэгелеттерспейсинг ровно такой же */
 }
 
