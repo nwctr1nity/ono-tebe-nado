@@ -302,7 +302,8 @@ h1 {
 }
 
 .about__title {
-    width: 693px;
+    white-space: nowrap;
+    width: 100%;
     padding: 136px 402px 100px 0;
 }
 
