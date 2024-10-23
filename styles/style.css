@@ -258,7 +258,7 @@ h2 {
   grid-template-columns: 334px 693px;
   grid-template-areas: "column-left column-right";
   gap: 24px;
-  margin: 145px 25px 0;
+  margin: 145px 24px 0;
 }
 
 .about__column-left {
@@ -284,8 +284,7 @@ h2 {
 }
 
 .about__title {
-  width: 100%;
-  padding: 138px 402px 100px 0;
+  padding: 138px 0 100px 0;
 }
 
 .about__text {
