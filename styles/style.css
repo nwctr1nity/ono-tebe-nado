@@ -1,13 +1,10 @@
-/* мне категорически не нравится что в рекомендуемых инструкцией тэгах вместо
-пробела ставится то нижнее подчеркивание, то дефис, но делал по инструкции и менять лень */
-
 .header {
   display: grid;
-  grid-template-columns: 454px 322px 266px;
+  grid-template-columns: 1fr min-content 1fr;
   grid-template-areas: "menu logo contacts";
   width: 1052px;
   margin: 95px 25px 92px;
-  font-family: Raleway;
+  font-family: Raleway, Arial, sans-serif;
   font-weight: 400;
   font-size: 18px;
   letter-spacing: 0.01em;
@@ -15,21 +12,22 @@
 
 .header__menu {
   display: flex;
-  padding-bottom: 3px;
   padding-left: 25px;
 }
 
 .header__links-list {
-  display: flex; /* этот флекс только для того, чтобы список вытянулся */
+  display: flex;
   grid-area: menu;
-  gap: 0 26px;
+  gap: 0 32px;
   align-self: center;
   list-style: circle;
 }
 
-/* сделал подчеркивание через границы, т.к. на макете линия не режется символами */
-.header__link {
-  border-bottom: 1px solid black;
+.header__links-list-item_no-bullit {
+  list-style-type: none;
+}
+
+a {
   text-decoration: none;
 }
 
@@ -37,49 +35,50 @@
   text-decoration: none;
 }
 
-.header__links-list-item_no-bullit {
-  list-style-type: none;
+.header__link {
+  text-decoration: underline 1px;
+  text-underline-offset: 5px;
 }
 
 .header__logo {
   display: block;
   grid-area: logo;
-  width: 139px;
-  padding-left: 5px;
-}
-
-.email {
-  border-bottom: 1px solid black;
-  text-decoration: none;
-}
-
-.telephone {
-  border-bottom: 1px solid black;
-  text-decoration: none;
+  width: 135px;
 }
 
 .contacts {
   grid-area: contacts;
   align-self: center;
-  padding-bottom: 5px;
-  padding-left: 8.8px;
+  padding-left: 9px;
+  font-style: normal;
   line-height: 1.35em;
   text-align: left;
   list-style: none;
+}
+
+.contacts-header {
+  justify-self: end;
+  padding-right: 59px;
+}
+
+.address__item {
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
 .cover {
   position: relative;
   inset: 0;
   width: 1100px;
-  height: 757px;
-  margin-bottom: 177px;
+  min-height: 757px;
+  margin-bottom: 178px;
   background: url(../images/cover.jpg) no-repeat center center;
   background-size: cover;
 }
 
 .overlay {
   position: absolute;
+  inset: 0;
   z-index: 0;
   width: 100%;
   height: 100%;
@@ -91,10 +90,8 @@
   z-index: 1;
   display: flex;
   flex-direction: column;
-  width: 1000px;
-  height: 335px;
   color: white;
-  font-family: Raleway;
+  font-family: Raleway, Arial, sans-serif;
   font-weight: 700;
   font-size: 100px;
   line-height: 1em;
@@ -108,25 +105,25 @@
 }
 
 .aligned-text_left {
-  margin: 172px 0 0 50px;
-}
-
-.aligned-text_center {
-  margin: 28px 0 0 40px;
-  text-align: center;
-}
-
-.aligned-text_right {
-  margin: 20px 0 0 634px;
-  text-align: right;
+  margin: 173px 0 0 50px;
 }
 
 .no-letter-spacing {
-  letter-spacing: 0; /* обнуление расстояния у последней буквы*/
+  letter-spacing: 0;
 }
 
 .letter-spacing-extended {
   letter-spacing: 0.6em;
+}
+
+.aligned-text_center {
+  margin: 28px 99px 0 40px;
+  text-align: center;
+}
+
+.aligned-text_right {
+  margin: 20px 19px 0 0;
+  text-align: right;
 }
 
 .cover__description {
@@ -136,16 +133,17 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 320px 50px 0px 78px;
+  padding: 135px 50px 0px 78px;
 }
 
 .cover__description-text {
   color: white;
-  font-family: Raleway;
+  font-family: Raleway, Arial, sans-serif;
   font-weight: 400;
   font-size: 22px;
   text-align: left;
   text-transform: uppercase;
+  word-spacing: 0.9em;
 }
 
 .bet-button {
@@ -153,7 +151,7 @@
   height: 51px;
   border: 1px solid white;
   color: white;
-  font-family: Raleway;
+  font-family: Raleway, Arial, sans-serif;
   font-weight: 500;
   font-size: 22px;
   line-height: 1.174em;
@@ -162,42 +160,13 @@
   background-color: transparent;
 }
 
-.description-letter-spacing-extended {
-  /* спан для больших пробелов между словами */
-  font-family: Raleway;
-  font-weight: 400;
-  font-size: 22px;
-  letter-spacing: 0.8em;
-  text-align: left;
-}
-
-.description-letter-spacing-extended-more {
-  /* подгон под макет */
-  font-family: Raleway;
-  font-weight: 400;
-  font-size: 22px;
-  letter-spacing: 0.9em;
-  text-align: left;
-}
-
-.description-letter-spacing-extended-between {
-  /* одиночная В стоит между двумя словами, поэтому отступ больше */
-  font-family: Raleway;
-  font-weight: 400;
-  font-size: 22px;
-  letter-spacing: 1.1em;
-  text-align: left;
-}
-
 .lots {
   width: 1052px;
-  height: 692px;
   margin: 0 24px;
-  text-decoration: none;
 }
 
-h3 {
-  font-family: Raleway;
+h2 {
+  font-family: Raleway, Arial, sans-serif;
   font-weight: 700;
   font-size: 40px;
   line-height: 1.174em;
@@ -211,6 +180,7 @@ h3 {
 
 .lots__card-list {
   display: flex;
+  flex-wrap: wrap;
   gap: 25px;
 }
 
@@ -219,48 +189,25 @@ h3 {
   display: flex;
   flex-direction: column;
   width: 334px;
-  height: 563px;
-  margin-bottom: 30px;
+  min-height: 563px;
+  margin-bottom: 31px;
+  background-position: center;
+  background-size: cover;
 }
 
 .card__title {
   position: relative;
   z-index: 1;
-  width: 254px;
   margin: 51px 40px 0px;
   color: white;
-  font-family: Raleway;
+  font-family: Raleway, Arial, sans-serif;
   font-weight: 700;
   font-size: 22px;
-  line-height: 1.136em;
+  line-height: 1.196em;
   text-align: left;
-  text-decoration: none;
+  text-decoration: underline 1px;
+  text-underline-offset: 3px;
   text-transform: uppercase;
-}
-
-/* опять таки в макете андерлайн не рвется символами, поэтому так */
-.anchor-underline {
-  border-bottom: 1px solid white;
-}
-
-.card_type_film {
-  row-gap: 238px;
-  background-image: url(../images/card-lot-01.jpg);
-  background-position: center;
-  background-size: cover;
-}
-
-.card_type_book {
-  background-image: url(../images/card-lot-02.jpg);
-  background-position: center;
-  background-size: cover;
-}
-
-.card_type_picture {
-  row-gap: 90px;
-  background-image: url(../images/card-lot-03.jpg);
-  background-position: center;
-  background-size: cover;
 }
 
 .card__text {
@@ -268,24 +215,25 @@ h3 {
   z-index: 1;
   padding: 0 40px;
   color: white;
-  font-family: Raleway;
+  font-family: Raleway, Arial, sans-serif;
   font-weight: 400;
   font-size: 20px;
   line-height: 1.2em;
   text-align: left;
-  text-decoration: none;
 }
 
-.first-card__text {
-  padding-top: 6px;
+.card_type_film {
+  row-gap: 241px;
+  background-image: url(../images/card-lot-01.jpg);
 }
 
-.second-card__text {
-  padding-top: 3px;
+.card_type_book {
+  background-image: url(../images/card-lot-02.jpg);
 }
 
-.third-card__text {
-  padding-top: 9px;
+.card_type_picture {
+  row-gap: 95px;
+  background-image: url(../images/card-lot-03.jpg);
 }
 
 .span-13space-lots-text {
@@ -294,39 +242,35 @@ h3 {
 
 .lots__look-more-link {
   padding: 0 820px 2px 40px;
-  font-family: Raleway;
+  font-family: Raleway, Arial, sans-serif;
   font-weight: 400;
   font-size: 20px;
   line-height: 1.174em;
   text-align: left;
+  text-decoration: underline 1px;
+  text-underline-offset: 5px;
   text-transform: lowercase;
-}
-
-.lots__look-more-link-underline {
-  border-bottom: 1px solid black;
 }
 
 .about {
   display: grid;
   grid-template-columns: 334px 693px;
   grid-template-areas: "column-left column-right";
-  gap: 50px;
-  margin: 146px 25px 0;
+  gap: 24px;
+  margin: 145px 25px 0;
+}
+
+.about__column-left {
+  grid-area: column-left;
 }
 
 .about__logo-background {
   display: flex; /* чтоб маржын ауто работал у лого ну вы поняли да */
   width: 240px;
   height: 240px;
-  margin: 35px auto 320px;
+  margin: 37px auto 320px;
   border-radius: 50%;
   background-color: black;
-}
-
-.about__title {
-  width: 100%;
-  padding: 138px 402px 100px 0;
-  white-space: nowrap;
 }
 
 .about__logo {
@@ -334,55 +278,29 @@ h3 {
   margin: auto;
 }
 
-.about__column-left {
-  grid-area: "column-left";
+.about__column-right {
+  grid-area: column-right;
 }
 
-.about__column-right {
-  grid-area: "column-right";
+.about__title {
+  width: 100%;
+  padding: 138px 402px 100px 0;
 }
 
 .about__text {
-  margin-bottom: 23px;
+  margin-bottom: 24px;
   color: black;
-  font-family: Raleway;
+  font-family: Raleway, Arial, sans-serif;
   font-weight: 400;
   font-size: 20px;
-  line-height: 1.2em;
+  line-height: 1.198em;
   letter-spacing: 0.05px;
   text-align: left;
 }
 
-.paragraph-0space {
-  margin-bottom: 0;
+.paragraph-no-space {
+  margin-bottom: 0px;
   letter-spacing: 0;
-}
-
-/* то что будет снизу - это то, как представлено в макете. 
-Но на глаз 0 разницы как будто бы */
-
-.span-0space-about-text {
-  letter-spacing: 0;
-}
-
-.span-2space-about-text {
-  letter-spacing: 0.02em;
-}
-
-.span-minus-1space-about-text {
-  letter-spacing: -0.01em;
-}
-
-.span-3space-about-text {
-  letter-spacing: 0.03em;
-}
-
-.span-4space-about-text {
-  letter-spacing: 0.04em;
-}
-
-.span-1space-about-text {
-  letter-spacing: 0.01em; /* а это вообще крайне странное правило, т.к. в родительском тэгелеттерспейсинг ровно такой же */
 }
 
 .footer {
@@ -390,9 +308,8 @@ h3 {
   grid-template-columns: 240.52px 519.48px 240px;
   grid-template-areas: "contacts menu social-list";
   width: 1000px;
-  height: 98px;
-  margin: 180px 50px 88px 42px;
-  font-family: Raleway;
+  margin: 181px 50px 88px 42px;
+  font-family: Raleway, Arial, sans-serif;
   font-weight: 400;
   font-size: 18px;
   letter-spacing: 0.01em;
@@ -406,7 +323,6 @@ h3 {
   display: flex;
   flex-direction: column;
   grid-area: menu;
-  gap: 0px 32px;
   align-self: flex-start;
   padding-left: 193px;
   line-height: 1.174em;
@@ -414,13 +330,13 @@ h3 {
   list-style: none;
 }
 
-.footer__link {
-  border-bottom: 1px solid black;
+.footer__link_active {
   text-decoration: none;
 }
 
-.footer__link_active {
-  text-decoration: none;
+.footer__link {
+  text-decoration: underline 1px;
+  text-underline-offset: 4px;
 }
 
 .social-icon {
