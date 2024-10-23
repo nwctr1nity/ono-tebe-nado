@@ -31,14 +31,15 @@ a {
   text-decoration: none;
 }
 
-.header__link_active {
-  text-decoration: none;
-}
-
 .header__link {
   text-decoration: underline 1px;
   text-underline-offset: 5px;
 }
+
+.header__link_active {
+  text-decoration: none;
+}
+
 
 .header__logo {
   display: block;
@@ -61,7 +62,7 @@ a {
   padding-right: 59px;
 }
 
-.address__item {
+.contacts__item {
   text-decoration: underline;
   text-underline-offset: 4px;
 }
@@ -330,13 +331,13 @@ h2 {
   list-style: none;
 }
 
-.footer__link_active {
-  text-decoration: none;
-}
-
 .footer__link {
   text-decoration: underline 1px;
   text-underline-offset: 4px;
+}
+
+.footer__link_active {
+  text-decoration: none;
 }
 
 .social-icon {

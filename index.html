@@ -13,13 +13,13 @@
     <header class="header">
       <nav class="header__menu">
         <ul class="header__links-list">
-          <li class="header__links-list-item_no-bullit">
-            <a class="header__link_active" href="#">главная</a>
+          <li class="header__links-list-item header__links-list-item_no-bullit">
+            <a class="header__link header__link_active" href="#">главная</a>
           </li>
-          <li>
+          <li class="header__links-list-item">
             <a class="header__link" href="#lots">посмотреть лоты</a>
           </li>
-          <li>
+          <li class="header__links-list-item">
             <a class="header__link" href="#about">об аукционе</a>
           </li>
         </ul>
@@ -33,15 +33,13 @@
       </a>
 
       <address class="contacts contacts-header">
-        <li>
-          <a class="address__item" href="tel:+99995555555"> +9 999 555 5555</a>
-        </li>
-        <li>
-          <a class="address__item" href="mailto:info@sobaka.ge">
-            info@sobaka.ge</a
-          >
-        </li>
-        <li>наб. Принсенграхт 263-<br />265, Амстердам</li>
+        <a class="contacts__item" href="tel:+99995555555" target="_blank"> 
+          +9 999 555 5555
+        </a><br/>
+        <a class="contacts__item" href="mailto:info@sobaka.ge" target="_blank">
+          info@sobaka.ge
+        </a><br/>
+        наб. Принсенграхт 263-<br />265, Амстердам
       </address>
     </header>
     <main>
@@ -71,7 +69,7 @@
         <h2 class="lots__heading">лоты</h2>
         <ul class="lots__card-list">
           <li class="lots__card-list-item">
-            <a class="card-link" href="">
+            <a class="card-link" href="" target="_blank">
               <div class="card card_type_film">
                 <div class="overlay"></div>
                 <h3 class="card__title">
@@ -87,7 +85,7 @@
           </li>
 
           <li class="lots__card-list-item">
-            <a class="card-link" href="">
+            <a class="card-link" href="" target="_blank">
               <div class="card card_type_book">
                 <div class="overlay"></div>
                 <h3 class="card__title">
@@ -105,7 +103,7 @@
             </a>
           </li>
           <li class="lots__card-list-item">
-            <a class="card-link" href="">
+            <a class="card-link" href="" target="_blank">
               <div class="card card_type_picture">
                 <div class="overlay"></div>
                 <h3 class="card__title">
@@ -123,7 +121,7 @@
             </a>
           </li>
         </ul>
-        <a class="lots__look-more-link" href=""> Посмотреть больше </a>
+        <a class="lots__look-more-link" href="" target="_blank"> Посмотреть больше </a>
       </section>
       <section class="about" id="about">
         <article class="about__column-left">
@@ -157,30 +155,30 @@
     </main>
     <footer class="footer">
       <address class="contacts">
-        <li>
-          <a class="address__item" href="tel:+99995555555"> +9 999 555 5555</a>
-        </li>
-        <li>
-          <a class="address__item" href="mailto:info@sobaka.ge">
-            info@sobaka.ge</a
-          >
-        </li>
-        <li>наб. Принсенграхт 263-<br />265, Амстердам</li>
+        <a class="contacts__item" href="tel:+99995555555" target="_blank">
+          +9 999 555 5555
+        </a><br/>
+        <a class="contacts__item" href="mailto:info@sobaka.ge" target="_blank">
+          info@sobaka.ge
+        </a><br/>
+        наб. Принсенграхт 263-<br />265, Амстердам
       </address>
       <nav class="footer__menu">
         <ul class="footer__links-list">
           <li>
-            <a class="footer__link_active" href="#" target="_blank">главная</a>
+            <a class="footer__link footer__link_active" href="#">
+              главная
+            </a>
           </li>
           <li>
-            <a class="footer__link" href="#lots" target="_blank"
-              >посмотреть лоты</a
-            >
+            <a class="footer__link" href="#lots">
+              посмотреть лоты
+            </a>
           </li>
           <li>
-            <a class="footer__link" href="#about" target="_blank"
-              >об аукционе</a
-            >
+            <a class="footer__link" href="#about">
+              об аукционе
+            </a>
           </li>
         </ul>
       </nav>
