@@ -175,7 +175,7 @@ h2 {
 }
 
 .lots__heading {
-  padding: 2px 891px 27px 40px;
+  padding: 2px 0 27px 40px;
   text-align: left;
 }
 
@@ -183,17 +183,22 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   gap: 25px;
+  margin-bottom: 31px;
+}
+
+.lots__card-list-item {
+  width: 334px;
+  flex-grow: 1;
 }
 
 .card {
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 334px;
   min-height: 563px;
-  margin-bottom: 31px;
   background-position: center;
   background-size: cover;
+  justify-content: space-between;
 }
 
 .card__title {
@@ -214,7 +219,7 @@ h2 {
 .card__text {
   position: relative;
   z-index: 1;
-  padding: 0 40px;
+  padding: 0 40px 48px;
   color: white;
   font-family: Raleway, Arial, sans-serif;
   font-weight: 400;
@@ -224,7 +229,6 @@ h2 {
 }
 
 .card_type_film {
-  row-gap: 241px;
   background-image: url(../images/card-lot-01.jpg);
 }
 
@@ -233,16 +237,15 @@ h2 {
 }
 
 .card_type_picture {
-  row-gap: 95px;
   background-image: url(../images/card-lot-03.jpg);
 }
 
-.span-13space-lots-text {
+.span-big-letter-spacing {
   letter-spacing: 0.13em;
 }
 
 .lots__look-more-link {
-  padding: 0 820px 2px 40px;
+  margin-left: 40px;
   font-family: Raleway, Arial, sans-serif;
   font-weight: 400;
   font-size: 20px;
@@ -266,7 +269,7 @@ h2 {
 }
 
 .about__logo-background {
-  display: flex; /* чтоб маржын ауто работал у лого ну вы поняли да */
+  display: flex;
   width: 240px;
   height: 240px;
   margin: 37px auto 320px;
@@ -288,7 +291,9 @@ h2 {
 }
 
 .about__text {
-  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
   color: black;
   font-family: Raleway, Arial, sans-serif;
   font-weight: 400;
@@ -296,11 +301,6 @@ h2 {
   line-height: 1.198em;
   letter-spacing: 0.05px;
   text-align: left;
-}
-
-.paragraph-no-space {
-  margin-bottom: 0px;
-  letter-spacing: 0;
 }
 
 .footer {
